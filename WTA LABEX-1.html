@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Calculator</title>
+<script type="text/javascript">
+function call(click_id)
+{
+var v1=parseFloat(document.getElementById("ip1").value);
+var v2=parseFloat(document.getElementById("ip2").value);
+if(isNaN(v1) || isNaN(v2))
+alert("enter a valid number");
+else if(click_id=="add")
+document.getElementById("output").value=v1+v2;
+else if(click_id=="sub")
+document.getElementById("output").value=v1-v2;
+else if(click_id=="mul")
+document.getElementById("output").value=v1*v2;
+else if(click_id=="div")
+document.getElementById("output").value=v1/v2;
+}
+</script>
+</head>
+<body>
+<style>
+body {
+  background-color:grey;
+}
+</style>
+<center>
+<h1> SIMPLE CALCULATOR </h1>
+<table style="background-color:orange" align=="center">
+<tr>
+<td>
+<form method="get" action="">
+<div width=65% align="center">
+<label>value1<input type="text" id="ip1"/></label>
+<label>value2<input type="text" id="ip2"/></label>
+</div>
+<br>
+<div width=75% align="center">
+<input type="button" value="Addition" id="add" onclick="call(this.id)"/>
+<input type="button" value="Subtraction" id="sub" onclick="call(this.id)"/>
+<input type="button" value="Multiplication" id="mul" onclick="call(this.id)"/>
+<input type="button" value="Division" id="div" onclick="call(this.id)"/>
+<br>
+<br>
+<lablel>Answer:<input type="text" id="output"/></label> 
+<input type="reset" value="CLEAR ALL"/>
+</div>
+</form>
+</td>
+</tr>
+</table>
+</center>
+</body>
+</html>
+
